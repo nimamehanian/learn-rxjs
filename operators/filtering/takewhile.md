@@ -27,7 +27,7 @@ const subscribe = example.subscribe(val => console.log(val));
 // emit 3, 3, 3, 9, 1, 4, 5, 8, 96, 3, 66, 3, 3, 3
 const source = Rx.Observable.of(3, 3, 3, 9, 1, 4, 5, 8, 96, 3, 66, 3, 3, 3);
 
-// allow values until value from source equals 3, then complete
+// allow values while value from source equals 3, then complete
 // output: [3, 3, 3]
 source
  .takeWhile(it => it === 3 )
